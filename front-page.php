@@ -4,12 +4,25 @@
         <p>Your ultimate guide to exploring the vibrant city of Ottawa</p>
 </div>
 
-<section>
+<section class="testimonial-title">
+    <h1>What people are saying</h1>
 <div class="home-section testimonials-section">
-    <p>"Amazing experience! Ottawa Discoveries helped me discover hidden gems I never knew existed."</p>
-            <p class="author">- John Doe</p>
-    <p>"Thank you Ottawa Discoveries for making my trip to Ottawa unforgettable. Can't wait to come back!"</p>
-            <p class="author">- Jane Smith</p>    
+    <div class="testimonial-container">
+        <div class="testimonial">   
+        <img src="<?php echo get_theme_file_uri('assets/john.jpg');?>">
+        <blockquote>"Absolutely love the service provided by Ottawa Discoveries! They exceeded my expectations in every way possible. Highly recommend!"</blockquote>
+        <cite>- John Doe</cite>
+    </div>
+    <div class="testimonial">
+        <img src="<?php echo get_theme_file_uri('assets/jane.jpg');?>">
+        <blockquote>"The team at Ottawa Discoveries is incredible. Their attention to detail and dedication to customer satisfaction is unmatched. I'm a customer for life!"</blockquote>
+        <cite>- Jane Smith</cite>
+    </div>
+    <div class="testimonial">
+        <img src="<?php echo get_theme_file_uri('assets/david.jpg');?>">
+        <blockquote>"I can't thank Ottawa Discoveries enough for their outstanding service. From start to finish, they made the process seamless and enjoyable. 10/10!"</blockquote>
+        <cite>- David Johnson</cite>
+    </div>
 </div>
 </section>
 
