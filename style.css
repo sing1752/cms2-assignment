@@ -3,7 +3,7 @@
  * Theme URI:         https://example.com/fabled-sunset
  * Description:       This is my first theme
  * Version:           1.0.0
- * Author:            Sabrina Chimanski and Shruti Sood
+ * Author:            Sabrina Chimanski,Shruti Sood,Gilbert,Dev
  * Author URI:        https://example.com
  * Tags:              block-patterns, full-site-editing
  * Text Domain:       cms2project
@@ -30,13 +30,13 @@
 
 /* General styles */
 body {
-    background-color:#FAF9F1 ;
+    background-color:#FBFBF2 ;
     color: var(--dark-green);
 }
 
 /* Header styles */
 header {
-    background-color: var(--light-gray);
+    background-color: #FBFBF2;
     color: rgb(0, 0, 0);
     padding: 10px 20px;
 }
@@ -95,6 +95,31 @@ header {
     color: var(--dark-green);
 }
 
+/* Social media icons */
+.social-icons {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 10px; 
+    font-size: 24px; 
+    color: #000;
+}
+
+
+.social-icons a:hover {
+	color: #aa1d1d;
+}
+
+/* Widget section */
+.widget-section {
+    background-color: #f0f0f0; 
+    padding: 10px;
+}
+
 /* Footer styles */
 footer {
     background-color: var(--red);
@@ -144,6 +169,10 @@ footer {
     color:#55857f;
 }
 
+.copy {
+	text-align: center;
+}
+
 /* Content styles */
 .about-title {
     font-size: 60px;
@@ -159,10 +188,10 @@ footer {
     background-size: cover;
     background-position: center;
     height: 45vw;
-    padding: 100px;
     font-size: 22px;
     color: rgb(255, 255, 255);
     margin: 0 auto;
+	padding: 50px;
     text-align:left;
 }
 
@@ -408,7 +437,7 @@ footer {
     }
     
     .primary-menu a {
-        display: block; 
+        display: flex; 
         padding: 10px; 
     }
     
@@ -457,33 +486,29 @@ footer {
     }
 
     .about-title {
-        font-size: 40px; 
-        margin-top: 10px; 
-        margin-bottom: 10px;
-        color: #aa1d1d;
+        font-size: 24px; /* Decrease font size for mobile */
     }
-    
+
     .about {
-        background-image: url('assets/parliament-hill.jpg');
+		background-image: url('assets/parliament-hill.jpg'); 
         background-size: cover;
-        background-position: center;
-        padding: 50px; 
-        font-size: 18px; 
-        color: rgb(255, 255, 255);
-        text-align: left;
+        background-position: center;  
     }
-    
-    .about p {
-        margin-right: 0; 
-    }
+	
+	.about p {
+		text-align: center;
+		font-size: 16px; 
+		padding: 50px 20px;
+	}
     
     /* Hero banner styles */
     .hero-banner {
-        background-image: url('assets/parliament-hill.jpg'); 
+       
         background-size: cover;
         background-position: center;
-        padding: 50px 20px; 
-        font-size: 24px; 
+        color: #ffffff;
+        padding: 100px 0;
+        text-align: center;
     }
     
     /* Home section styles */
@@ -621,7 +646,7 @@ footer {
     overflow: hidden;
     margin: 30px auto 40px;
     width: 80%;
-    max-width: 800px; /
+    max-width: 800px;
     height: 300px; 
     position: relative;
     z-index: 1;
@@ -634,6 +659,138 @@ footer {
 
 @media (max-width: 768px) {
     .google-map-container {
-        height: 200px; 
+        height:200px;
     }
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content {
+    min-height: calc(100vh - 100px - 50px);
+    flex: 1;
+}
+
+/* Custom styles for Bootstrap cards */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background-color: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+    }
+
+    .overlay-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+
+    .card:hover .overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    /* Hero Banner Styles */
+.hero-banner {
+   
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-banner .btn-primary {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.hero-banner .btn-primary:hover {
+    background-color: #d84315;
+}
+
+
+
+
+/* Custom Section Styles */
+/* Custom Section Styles */
+.custom-section {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.custom-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.custom-section h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.custom-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.custom-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Hover effects */
+.custom-section:hover h2 {
+    color: #ff5722; /* Change color on hover */
+}
+
+.custom-section:hover p {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Animations */
+.custom-section p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.custom-section:hover p {
+    opacity: 1;
+    transform: translateY(0);
 }
